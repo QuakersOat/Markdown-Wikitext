@@ -6,8 +6,13 @@ Paste your markdown document in the box below.
 
 <script>
 function input() {
-  document.write(document.getElementById("input").elements[0].value);
+  convert(document.getElementById("input").elements[0].value);
 }
-function convert() {}
-function output() {}
+function convert(data) {
+  var data = data;
+  output(data);
+}
+function output(data) {
+  document.body.innerHTML += "<br/><textarea>" + data + "</textarea>"
+}
 </script>
