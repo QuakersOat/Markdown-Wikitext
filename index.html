@@ -8,18 +8,24 @@ Paste your markdown document in the box below.
 function input() {
   convert(document.getElementById("input").elements[0].value);
 }
+
 function convert(data) {
   var data = data;
   output(data);
 }
+
 function output(data) {
   document.body.innerHTML += "<br/><textarea class=\"text\">" + data + "</textarea>"
 }
 </script>
 <style>
+form {
+  margin: 0 auto;
+}
 .text {
   resize: none;
   width: 70%;
   height: 30%;
+  margin: 0 auto;
 }
 </style>
