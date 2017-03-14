@@ -1,6 +1,6 @@
 Paste your markdown document in the box below.
 <form id="input">
-   <textarea></textarea>
+  <textarea class="text"></textarea><br/>
    <button onclick="input()">Submit</button>
 </form>
 
@@ -13,7 +13,7 @@ function convert(data) {
   output(data);
 }
 function output(data) {
-  document.body.innerHTML += "<br/><textarea>" + data + "</textarea>"
+  document.body.innerHTML += "<br/><textarea class=\"text\">" + data + "</textarea>"
 }
 
 var observe;
@@ -28,7 +28,7 @@ else {
     };
 }
 function init () {
-    var text = document.getElementById('text');
+    var text = document.getElementsByClassName('text');
     function resize () {
         text.style.height = 'auto';
         text.style.height = text.scrollHeight+'px';
