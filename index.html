@@ -1,6 +1,13 @@
 Paste your markdown document in the box below.
-<form>
-   <input type="submit" value="Submit">
-   <textarea rows="4" cols="50">
-   </textarea>
+<form id="input">
+   <textarea></textarea>
+   <button onclick="input()">Submit</button>
 </form>
+
+<script>
+function input() {
+  document.write(document.getElementById("input").elements[0].value);
+}
+function convert() {}
+function output() {}
+</script>
